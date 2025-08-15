@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen</title>
+    <link rel="stylesheet" href="../css/welcome.css">
+</head>
+
+<body>
+    <div class="background" style="background: url('../assets/krull/krull.jpg') no-repeat center center/cover; filter: brightness(0.85);"></div>
+
+    <!-- Navbar Baru -->
+    <header class="navbar">
+        <ul class="nav-links">
+            <li><a href="Queen.html">Queen</a></li>
+            <li><a href="nao.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <!-- Panel Kiri -->
+        <aside class="left-panel">
+            <div>
+                <div class="clock" id="clock">12:00</div>
+                <div class="date" id="date">Rabu, 30 Juli 2025</div>
+            </div>
+            <div class="friend-list">
+                <div class="service-card">
+                    <a href="nao.html">Nao Tomori</a>
+                </div>
+                <div class="service-card">
+                    <a href="rikka.html">Takanashi Rikka</a>
+                </div>
+                <div class="service-card">
+                    <a href="elaina.html">Ashen Witch Elaina</a>
+                </div>
+                <div class="service-card">
+                    <a href="krull.html" class="active">Krull Tepes</a>
+                </div>
+                <div class="service-card">
+                    <a href="mahiru.html">Shiina Mahiru</a>
+                </div>
+                <div class="service-card">
+                    <a href="waguri.html">Waguri Kaoruko </a>
+                </div>
+
+            </div>
+            <button class="add-friend" onclick="window.location.href='https://linktr.ee/kuronemo'">
+                + Add Friend
+            </button>
+        </aside>
+
+        <!-- Panel Kanan -->
+        <aside class="right-panel">
+            <div class="profile-card">
+                <img src="../assets/krull/krull.gif" alt="Nao" class="avatar">
+                <div class="info">
+                    <h3>Krull Tepes</h3>
+                    <p>Krul Tepes (クルル・ツェペシ, Kururu Tsepeshi) is the vampire queen of Japan. She resides in the Third Capitol of the vampires Sanguinem, and also is the Third Progenitor, making her the strongest vampire in Japan. Deep down, she resents being
+                        a vampire, and the First Progenitor for turning her into one.</p>
+                </div>
+            </div>
+            <div class="gallery">
+                <h3>Gallery</h3>
+                <div class="gallery-grid">
+                    <img src="../assets/krull/krull3.jpeg" alt="Gallery 1">
+                    <img src="../assets/krull/krull2.jpeg" alt="Gallery 2">
+                    <img src="../assets/krull/krull1.jpeg" alt="Gallery 3">
+                    <img src="../assets/krull/krull4.jpeg" alt="Gallery 4">
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Designer By Queen</p>
+    </footer>
+
+    <script>
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            alert("Silakan login terlebih dahulu!");
+            window.location.replace("login.html");
+        }
+
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').innerText =
+                now.toLocaleTimeString('id-ID', {
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            document.getElementById('date').innerText =
+                now.toLocaleDateString('id-ID', {
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                });
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+
+</html>
