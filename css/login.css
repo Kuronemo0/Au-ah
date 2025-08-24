@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/Asuka.jpg") no-repeat center center/cover;
+    z-index: -1;
+}
+
+.login-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.25);
+    /* panel transparan */
+    backdrop-filter: blur(25px) saturate(160%);
+    -webkit-backdrop-filter: blur(25px) saturate(160%);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 400px;
+    border: 6px solid #9e4234;
+    /* Abu-abu netral */
+    /* semi transparan border */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+}
+
+.login-card h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.input-group input::placeholder {
+    color: #ddd;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+
+.input-group i.fas.fa-user,
+.input-group i.fas.fa-lock {
+    left: 1rem;
+}
+
+.input-group i.toggle-password {
+    right: 1rem;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 1.2rem;
+}
+
+.options a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+.register {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.register a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .left-panel,
+    .right-panel {
+        width: 100%;
+        margin-top: 20px;
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        .nav-links {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-img img {
+        width: 200px;
+    }
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    .profile-card,
+    .gallery {
+        max-width: 100%;
+    }
+    .pulse-wrapper {
+        width: 100%;
+        height: auto;
+    }
+    .profile-img img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1,
+    h2 {
+        font-size: 1.5rem;
+    }
+    .clock {
+        font-size: 1.8rem;
+    }
+    .nav-links a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
