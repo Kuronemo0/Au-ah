@@ -1,5 +1,3 @@
-/* Navbar */
-
 .navbar {
     display: flex;
     justify-content: center;
@@ -69,7 +67,6 @@ body {
 }
 
 
-/* About Section */
 
 .about {
     padding: 60px 20px;
@@ -156,17 +153,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Atur isi rata */
     height: 100%;
-    /* ✅ Isi penuh grid */
     min-height: 350px;
-    /* Paksa tinggi minimal */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card p {
     flex-grow: 1;
-    /* ✅ Biar deskripsi mengisi ruang tengah */
 }
 
 .service-card img {
@@ -262,4 +255,5 @@ footer {
         font-size: 14px;
         padding: 5px 10px;
     }
+
 }
